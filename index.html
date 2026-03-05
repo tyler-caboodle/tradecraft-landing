@@ -100,6 +100,24 @@
       color: var(--accent);
       text-decoration: none;
     }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .nav-link {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--text-primary); }
     .nav-actions { display: flex; align-items: center; gap: 12px; }
     .btn-ghost {
       background: transparent;
@@ -686,6 +704,7 @@
       .waitlist-form { flex-direction: column; }
       .hero-stat-row { gap: 32px; }
       .nav-actions .btn-ghost { display: none; }
+      .nav-links { display: none; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -696,6 +715,11 @@
   <nav>
     <div class="container nav-inner">
       <a href="#" class="nav-logo">TRADECRAFT</a>
+      <nav class="nav-links">
+        <a href="#how" class="nav-link">How It Works</a>
+        <a href="#value" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+      </nav>
       <div class="nav-actions">
         <a href="https://app.usetradecraft.com" class="btn-ghost">Log In</a>
         <a href="https://app.usetradecraft.com" class="btn-primary">Start Free Trial</a>
