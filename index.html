@@ -250,11 +250,11 @@
     }
     .stat-label {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--text-tertiary);
-      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .stat-value {
       font-family: 'Bebas Neue', sans-serif;
@@ -558,6 +558,50 @@
     }
     .footer-link:hover { color: var(--accent); }
 
+    /* SECTION CTA */
+    .section-cta {
+      text-align: center;
+      margin-top: 56px;
+    }
+    .btn-section-cta {
+      display: inline-block;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent-muted);
+      border-radius: 4px;
+      padding: 10px 24px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-section-cta:hover { background: var(--accent); color: #0d1117; }
+
+    /* BACK TO TOP */
+    #back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 40px;
+      height: 40px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, border-color 0.2s;
+      z-index: 200;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    #back-to-top.visible { opacity: 1; pointer-events: all; }
+    #back-to-top:hover { border-color: var(--accent); color: var(--accent); }
+
     /* SCROLL REVEAL */
     .reveal {
       opacity: 0;
@@ -747,7 +791,7 @@
         </div>
         <div class="hero-stat-row anim-4">
           <div>
-            <div class="stat-label">In</div>
+            <div class="stat-label">SOP ready in</div>
             <div class="stat-value">5 MINUTES</div>
           </div>
           <div>
@@ -755,7 +799,7 @@
             <div class="stat-value">NONE</div>
           </div>
           <div>
-            <div class="stat-label">For</div>
+            <div class="stat-label">Works for</div>
             <div class="stat-value">ANY TRADE</div>
           </div>
         </div>
@@ -799,6 +843,9 @@
             <div class="problem-card-body">Different techs do the same job different ways. Quality varies. Customers notice.</div>
           </div>
         </div>
+      </div>
+      <div class="section-cta reveal">
+        <a href="https://app.usetradecraft.com" class="btn-section-cta">Start free trial →</a>
       </div>
     </div>
   </section>
@@ -846,6 +893,9 @@
           <div class="step-tag">Field-ready</div>
         </div>
       </div>
+      <div class="section-cta reveal">
+        <a href="https://app.usetradecraft.com" class="btn-section-cta">Start free trial →</a>
+      </div>
     </div>
   </section>
 
@@ -889,6 +939,9 @@
             <div class="value-list-item">Print-ready for techs who want paper</div>
           </div>
         </div>
+      </div>
+      <div class="section-cta reveal">
+        <a href="https://app.usetradecraft.com" class="btn-section-cta">Start free trial →</a>
       </div>
     </div>
   </section>
@@ -959,33 +1012,18 @@
     </div>
   </section>
 
-  <!-- WAITLIST -->
+  <!-- CTA -->
   <section id="waitlist">
     <div class="container">
       <div class="waitlist-box reveal">
-        <div class="section-label">// Early Access</div>
-        <h2 class="waitlist-headline">Be first in the field.</h2>
+        <div class="section-label">// Get Started</div>
+        <h2 class="waitlist-headline">Ready when you are.</h2>
         <p class="waitlist-sub">
-          Tradecraft is in early access. Join the waitlist and we'll reach out personally when your spot is ready.
+          14-day free trial. Full access from day one. No credit card required.
         </p>
-        <div class="waitlist-form">
-          <label for="waitlist-email" class="sr-only">Email address</label>
-          <input
-            type="email"
-            class="waitlist-input"
-            id="waitlist-email"
-            name="email"
-            placeholder="your@email.com"
-            aria-label="Email address"
-            autocomplete="email"
-          />
-          <button class="btn-waitlist" onclick="handleWaitlist()" aria-label="Join the waitlist">Join Waitlist</button>
-        </div>
-        <div class="waitlist-success" id="waitlist-success">✓ You're on the list. We'll be in touch.</div>
-        <div class="waitlist-note">No spam. No pressure. Just a heads up when you're in.</div>
-        <div class="waitlist-divider">
-          <p>Already have an account?</p>
-          <a href="https://app.usetradecraft.com" class="btn-hero" style="font-size:0.88rem;padding:12px 28px;">Go to App →</a>
+        <a href="https://app.usetradecraft.com" class="btn-hero">Start Free Trial →</a>
+        <div class="waitlist-note" style="margin-top: 20px;">
+          Already have an account? <a href="https://app.usetradecraft.com" style="color: var(--accent); text-decoration: none;">Log in →</a>
         </div>
       </div>
     </div>
@@ -1000,6 +1038,9 @@
     </div>
   </footer>
 
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
   <script>
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
@@ -1009,31 +1050,17 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Waitlist
-    function handleWaitlist() {
-      const emailEl = document.getElementById('waitlist-email');
-      const email = emailEl.value;
-      if (!email || !email.includes('@')) {
-        emailEl.style.borderColor = 'var(--destructive)';
-        return;
-      }
-      // TODO: wire up to Netlify Forms or Formspree
-      emailEl.style.display = 'none';
-      document.querySelector('.btn-waitlist').style.display = 'none';
-      document.getElementById('waitlist-success').style.display = 'block';
-    }
-    document.getElementById('waitlist-email').addEventListener('keydown', e => {
-      if (e.key === 'Enter') handleWaitlist();
-    });
-
-    // Nav hide on scroll down
+    // Nav hide on scroll down + back-to-top
     let lastY = 0;
     const nav = document.querySelector('nav');
+    const backToTop = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
       nav.style.transform = (y > lastY && y > 80) ? 'translateY(-100%)' : 'translateY(0)';
       lastY = y;
+      backToTop.classList.toggle('visible', y > 400);
     });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 
 </body>
