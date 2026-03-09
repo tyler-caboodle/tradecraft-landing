@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/favicon.ico">
-  <title>TRADECRAFT — AI-Powered SOPs for Field Service Teams</title>
-  <meta name="description" content="Turn any field video into a complete SOP in minutes. No writing required. Every tech gets the right information, on their phone, on the job." />
+  <title>TRADECRAFT — Where Field Knowledge Lives</title>
+  <meta name="description" content="SOPs from field videos. Structured notes from voice recordings. Tradecraft is where trades teams build and capture the knowledge that runs their business." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://usetradecraft.com" />
-  <meta property="og:title" content="TRADECRAFT — AI-Powered SOPs for Field Service Teams" />
-  <meta property="og:description" content="Turn any field video into a complete SOP in minutes. No writing required. Every tech gets the right information, on their phone, on the job." />
+  <meta property="og:title" content="TRADECRAFT — Where Field Knowledge Lives" />
+  <meta property="og:description" content="SOPs from field videos. Structured notes from voice recordings. Tradecraft is where trades teams build and capture the knowledge that runs their business." />
   <meta property="og:site_name" content="TRADECRAFT" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TRADECRAFT — AI-Powered SOPs for Field Service Teams" />
-  <meta name="twitter:description" content="Turn any field video into a complete SOP in minutes. No writing required. Every tech gets the right information, on their phone, on the job." />
+  <meta name="twitter:title" content="TRADECRAFT — Where Field Knowledge Lives" />
+  <meta name="twitter:description" content="SOPs from field videos. Structured notes from voice recordings. Tradecraft is where trades teams build and capture the knowledge that runs their business." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -318,6 +318,29 @@
       margin-bottom: 16px;
     }
     .section-sub { color: var(--text-secondary); font-size: 1rem; max-width: 480px; margin: 0 auto; }
+    .steps-flow { margin-bottom: 64px; }
+    .steps-flow:last-child { margin-bottom: 0; }
+    .steps-flow-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .steps-flow-label::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -370,7 +393,7 @@
 
     /* VALUE PROPS */
     #value { padding: 100px 0; border-top: 1px solid var(--border); }
-    .value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
     .value-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -777,15 +800,16 @@
     <div class="hero-glow"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-eyebrow anim-1">AI-Powered SOPs for Field Service Teams</div>
+        <div class="hero-eyebrow anim-1">Where field knowledge lives.</div>
         <h1 class="hero-headline anim-2">
-          Film it. Upload it.<br/>
-          Your SOPs write<br/>
-          <em>themselves.</em>
+          Your crew should<br/>
+          do it your way.<br/>
+          <em>Now they can.</em>
         </h1>
         <p class="hero-sub anim-3">
-          Tradecraft turns any field video into a complete SOP in minutes.
-          No writing. Every tech knows what they need for every job from their phone.
+          Tradecraft captures what your best people know — from training videos and
+          job-site recordings — and puts it in every tech's hands.
+          No writing. No binders. No forgetting.
         </p>
         <div class="hero-cta-group anim-4">
           <a href="https://app.usetradecraft.com" class="btn-hero">Start Free Trial</a>
@@ -820,8 +844,9 @@
             Every trades company has one. A binder on a shelf. A Google Drive nobody opens.
             A Notes app on the owner's phone. <strong>Static, outdated, and ignored.</strong>
             <br/><br/>
-            The new hire guesses. Callbacks pile up. The owner ends up back on every job
-            because nobody else does it right.
+            The new hire guesses. Callbacks pile up. And the stuff your crew picks up every day —
+            materials that worked, prices you should have charged, things the client mentioned —
+            never gets written down at all.
             <br/><br/>
             <strong>Tradecraft gives that knowledge a place to live — and puts it
             in every tech's hands before they knock on the first door.</strong>
@@ -857,44 +882,90 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">// How It Works</div>
-        <h2 class="section-headline">Three steps. One SOP.</h2>
-        <p class="section-sub">Film it. Upload it. Done. One video. Every tech knows what to do.</p>
+        <h2 class="section-headline">Two tools. One platform.</h2>
+        <p class="section-sub">Build your process library once. Capture field knowledge every day.</p>
       </div>
-      <div class="steps-grid reveal">
-        <div class="step">
-          <div class="step-number">01</div>
-          <div class="step-icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>
-            </svg>
+
+      <!-- SOPs -->
+      <div class="steps-flow reveal">
+        <div class="steps-flow-label">SOPs — Build your process library</div>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>
+              </svg>
+            </div>
+            <div class="step-title">Film the process</div>
+            <div class="step-body">Have the person who knows the job film themselves doing it. Talk through every step as you go. Your phone camera is all you need.</div>
+            <div class="step-tag">Any phone</div>
           </div>
-          <div class="step-title">Film the process</div>
-          <div class="step-body">Have the person who knows the job film themselves doing it. Talk through every step as you go. Your phone camera is all you need.</div>
-          <div class="step-tag">Any phone</div>
-        </div>
-        <div class="step">
-          <div class="step-number">02</div>
-          <div class="step-icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
-            </svg>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+              </svg>
+            </div>
+            <div class="step-title">Upload to Tradecraft</div>
+            <div class="step-body">Drop the video in. Our AI listens, identifies every step, and builds a complete SOP automatically.</div>
+            <div class="step-tag">~5 minutes</div>
           </div>
-          <div class="step-title">Upload to Tradecraft</div>
-          <div class="step-body">Drop the video in. Our AI listens, identifies every step, and builds a complete SOP automatically.</div>
-          <div class="step-tag">~5 minutes</div>
-        </div>
-        <div class="step">
-          <div class="step-number">03</div>
-          <div class="step-icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/>
-            </svg>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/>
+              </svg>
+            </div>
+            <div class="step-title">Get a ready-to-use SOP</div>
+            <div class="step-body">A complete SOP lands in your library with every step linked back to the exact moment in the source video. Edit it, share it with your crew, pull it up on any job.</div>
+            <div class="step-tag">Field-ready</div>
           </div>
-          <div class="step-title">Get a ready-to-use SOP</div>
-          <div class="step-body">A complete SOP lands in your library with every step linked back to the exact moment in the source video. Edit it, share it with your crew, pull it up on any job.</div>
-          <div class="step-tag">Field-ready</div>
         </div>
       </div>
+
+      <!-- Field Notes -->
+      <div class="steps-flow reveal">
+        <div class="steps-flow-label">Field Notes — Capture knowledge every day</div>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/>
+              </svg>
+            </div>
+            <div class="step-title">Record or upload audio</div>
+            <div class="step-body">Walk a job site. Debrief from the truck. Talk through what you saw, what it'll take, and what the client said. Your phone is all you need.</div>
+            <div class="step-tag">Any device</div>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+              </svg>
+            </div>
+            <div class="step-title">AI transcribes and organizes</div>
+            <div class="step-body">Your recording gets transcribed and sorted automatically — materials, pricing notes, client requests, anything unusual about the job.</div>
+            <div class="step-tag">~2 minutes</div>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/>
+              </svg>
+            </div>
+            <div class="step-title">Structured note in your library</div>
+            <div class="step-body">Every recording becomes an organized note. Copy it in one tap and paste it into your estimate or field service manager. It's there when you need it.</div>
+            <div class="step-tag">Ready instantly</div>
+          </div>
+        </div>
+      </div>
+
       <div class="section-cta reveal">
         <a href="https://app.usetradecraft.com" class="btn-section-cta">Start free trial →</a>
       </div>
@@ -927,6 +998,21 @@
         </div>
         <div class="value-card">
           <div class="value-bg-number">02</div>
+          <div class="value-title">Field notes. Captured on the job.</div>
+          <div class="value-body">
+            Every job teaches you something. A material that worked. A price you should have charged.
+            Something the client mentioned. Field Notes captures it while you're still on site
+            and organizes it automatically. No notepad. No forgetting.
+          </div>
+          <div class="value-list">
+            <div class="value-list-item">Record audio or upload from your voice memo app</div>
+            <div class="value-list-item">AI pulls out materials, pricing, and client requests</div>
+            <div class="value-list-item">One-tap copy — paste into your estimate or FSM</div>
+            <div class="value-list-item">Builds a running record of your field knowledge</div>
+          </div>
+        </div>
+        <div class="value-card">
+          <div class="value-bg-number">03</div>
           <div class="value-title">New techs hit the ground running.</div>
           <div class="value-body">
             Your best people can't shadow every new hire forever.
@@ -962,7 +1048,7 @@
         <div class="pricing-card">
           <div class="pricing-tier">Starter</div>
           <div class="pricing-price">$47<span>/mo</span></div>
-          <div class="pricing-desc">The basics, locked in. Good for small teams that need SOPs without the overhead.</div>
+          <div class="pricing-desc">Build your SOP library. Good for small teams that need structured procedures without the overhead.</div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
             <li>3 seats</li>
@@ -970,7 +1056,6 @@
             <li>Field View for mobile</li>
             <li>Folder & crew access control</li>
             <li>SOP version history</li>
-            <li class="dimmed">AI revision</li>
           </ul>
           <a href="https://app.usetradecraft.com" class="btn-pricing">Get started</a>
         </div>
@@ -980,7 +1065,7 @@
           <div class="pricing-badge">Most popular</div>
           <div class="pricing-tier">Pro</div>
           <div class="pricing-price">$147<span>/mo</span></div>
-          <div class="pricing-desc">For growing teams. Every new feature ships to Pro first.</div>
+          <div class="pricing-desc">SOPs for training. Field Notes for daily capture. For growing teams that want the full platform.</div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
             <li>10 seats</li>
@@ -989,6 +1074,7 @@
             <li>Folder & crew access control</li>
             <li>SOP version history</li>
             <li>AI revision</li>
+            <li>Field Notes — voice capture + AI structuring</li>
           </ul>
           <a href="https://app.usetradecraft.com" class="btn-pricing primary">Get started</a>
         </div>
