@@ -340,6 +340,12 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
+    .label-desktop { display: inline; }
+    .label-mobile { display: none; }
+    @media (max-width: 640px) {
+      .label-desktop { display: none; }
+      .label-mobile { display: inline; }
+    }
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -893,7 +899,7 @@
 
       <!-- SOPs -->
       <div class="steps-flow reveal">
-        <div class="steps-flow-label">Standard Operating Procedures — Build your process library</div>
+        <div class="steps-flow-label"><span class="label-desktop">Standard Operating Procedures — Build your process library</span><span class="label-mobile">SOPs — Build your process library</span></div>
         <div class="steps-grid">
           <div class="step">
             <div class="step-number">01</div>
